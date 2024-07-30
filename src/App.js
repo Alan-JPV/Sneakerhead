@@ -11,6 +11,7 @@ import Err from './components/error';
 import ProductPage from './components/pl';
 import Profilesetting from './components/profilesetting';
 import Cart from './components/cart';
+import Wish from './components/wishlist';
 function App() {
   return (
     <>
@@ -24,7 +25,8 @@ function App() {
        <Route path="/*" element={<Err />}></Route> 
        <Route path="/product" element={<ProductPage />}></Route>  
        <Route path="/profile" element={<Profilesetting />}></Route>
-       <Route path="/cart" element={<Cart />}></Route>   
+       <Route path="/cart" element={<Cart />}></Route>  
+       <Route path="/wishlist" element={<Wish />}></Route>  
        </Routes>
     </BrowserRouter>
     </div>

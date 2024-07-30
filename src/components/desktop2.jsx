@@ -28,6 +28,7 @@ const b10={
   fontSize: '30px',
   color:'black',
   padding: '10px',
+  marginLeft:'550px'
 }
 const Desktop2 = (props) => {
   return (
@@ -144,9 +145,9 @@ const Desktop2 = (props) => {
                         </div>
                          
                     <div style={{  justifyContent:'center',alignSelf:'center',}}>
-                    <Link to ='/product'><button style={b10}>view more ➡️</button></Link>
                     </div>
                 </div>
+                <Link to ='/product'><button style={b10}>view more ➡️</button></Link>
             </div>
         </div>
     </div>
