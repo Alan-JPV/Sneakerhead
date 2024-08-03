@@ -12,6 +12,7 @@ import ProductPage from './components/pl';
 import Profilesetting from './components/profilesetting';
 import Cart from './components/cart';
 import Wish from './components/wishlist';
+import Adm from './components/admin';
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
        <Route path="/profile" element={<Profilesetting />}></Route>
        <Route path="/cart" element={<Cart />}></Route>  
        <Route path="/wishlist" element={<Wish />}></Route>  
+       <Route path="/admin" element={<Adm />}></Route>
        </Routes>
     </BrowserRouter>
     </div>
