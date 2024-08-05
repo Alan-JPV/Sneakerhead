@@ -28,7 +28,7 @@ const b10={
   fontSize: '30px',
   color:'black',
   padding: '10px',
-  marginLeft:'550px'
+  marginLeft:'450px'
 }
 const Desktop2 = (props) => {
   return (
