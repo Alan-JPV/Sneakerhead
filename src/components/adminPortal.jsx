@@ -63,7 +63,7 @@ function Adm1(){
     // Simple username and password check
     if (username === 'admin' && password === 'password') {
       // Redirect to the admin app running on port 4000
-      window.location.href = 'http://localhost:4000';
+      window.location.href = 'https://sneakerhead-admin-phi.vercel.app/';
     } else {
       alert('Invalid credentials');
     }
