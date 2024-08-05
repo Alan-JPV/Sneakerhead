@@ -4,6 +4,7 @@ import myImage2 from '../components/b1_shoe.png'
 import myImage3 from '../components/p3.png'
 import myImage4 from '../components/p4.png'
 import { Helmet } from 'react-helmet'
+import { Link } from "react-router-dom";
 
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 import './cart.css'
@@ -46,6 +47,18 @@ const h3={
     color:'black',
     padding: '10px',
 }
+const b10={
+    position:'center',
+    borderRadius: '10px',
+    justifyContent: 'space-between',
+    fontSize: '30px',
+    color:'black',
+    padding: '10px',
+    height:'80px',
+    width:'250px',
+    marginLeft:'450px',
+  }
+
 function Cart(){
     return (
         <>
@@ -118,7 +131,7 @@ function Cart(){
 
         </div>
         <p1 style={h2}> total cost= $399</p1>
-        <button style={h3}>BUY ALL 🛒</button>
+        <Link to='/Check'><button style={b10}>Buy now</button></Link>
         </div>
         </>
     )
