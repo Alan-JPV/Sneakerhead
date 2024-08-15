@@ -31,7 +31,7 @@ const Dropdown = () => {
                         <Link to ='/profile'>Profile</Link>
                     </li>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='/product'>Products</Link>
                     </li>
                     <li>
                         <Link to='/wishlist'>WishList</Link>

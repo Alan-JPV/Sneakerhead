@@ -65,14 +65,6 @@ const Desktop2 = (props) => {
                                 <div className="product-img">
                                     <img src={myImage} alt="product image" />
                                 </div>
-                                <div className="product-btns">
-                                    <button type="button" className="btn-cart">
-                                        add to cart <span><i className="fas fa-plus"></i></span>
-                                    </button>
-                                    <button type="button" className="btn-buy">
-                                        buy now <span><i className="fas fa-shopping-cart"></i></span>
-                                    </button>
-                                </div>
                             </div>
                             <div className="product-info">
                                 <a href="#" className="product-name">sample product</a>
@@ -85,14 +77,6 @@ const Desktop2 = (props) => {
                             <div className="product-content">
                                 <div className="product-img">
                                     <img src={myImage2} alt="product image" />
-                                </div>
-                                <div className="product-btns">
-                                    <button type="button" className="btn-cart">
-                                        add to cart <span><i className="fas fa-plus"></i></span>
-                                    </button>
-                                    <button type="button" className="btn-buy">
-                                        buy now <span><i className="fas fa-shopping-cart"></i></span>
-                                    </button>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -107,14 +91,7 @@ const Desktop2 = (props) => {
                                 <div className="product-img">
                                     <img src={myImage3} alt="product image" />
                                 </div>
-                                <div className="product-btns">
-                                    <button type="button" className="btn-cart">
-                                        add to cart <span><i className="fas fa-plus"></i></span>
-                                    </button>
-                                    <button type="button" className="btn-buy">
-                                        buy now <span><i className="fas fa-shopping-cart"></i></span>
-                                    </button>
-                                </div>
+
                             </div>
                             <div className="product-info">
                                 <a href="#" className="product-name">sample product</a>
@@ -128,14 +105,7 @@ const Desktop2 = (props) => {
                                 <div className="product-img">
                                     <img src={myImage4} alt="product image" />
                                 </div>
-                                <div className="product-btns">
-                                    <button type="button" className="btn-cart">
-                                        add to cart <span><i className="fas fa-plus"></i></span>
-                                    </button>
-                                    <button type="button" className="btn-buy">
-                                        buy now <span><i className="fas fa-shopping-cart"></i></span>
-                                    </button>
-                                </div>
+
                             </div>
                             <div className="product-info">
                                 <a href="#" className="product-name">sample product</a>

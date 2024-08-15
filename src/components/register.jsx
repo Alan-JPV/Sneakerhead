@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import img1 from '../components/sneakerhead.png';
+import { useNavigate } from 'react-router-dom';
+import { useUser } from '../context/UserContext';
 
 const Body = {
    display: 'flex',
@@ -79,6 +81,128 @@ function Reg(){
       textDecoration: 'none',
       cursor: 'pointer',
     };
+    {/*
+    const navigate =useNavigate();
+    const[username,setOne]=useState(0);
+    const[email,setTwo]=useState(0);
+    const[password,setThree]=useState(0);
+    const[repassword,setFour]=useState(0);
+    const[signUp,setPrint]=useState(0);
+    const[error2,setError]=useState(false);
+    const {login} = useUser();
+
+       function name1(e){
+           setOne(e.target.value);
+       }
+       function email1(e){
+           setTwo(e.target.value);
+       }
+       function password1(e){
+           setThree(e.target.value);
+       }
+       function repassword1(e){
+            setFour(e.target.value);
+       }
+       function print(){
+        if(password==repassword){
+            setPrint({username,email,password,repassword});
+            setError(false);
+            const response=axios.post('http://localhost:5000/register',{
+               username,
+               password,
+               email,
+           })
+           login(response.data.usr.username,response.data.usr.password,response.data.usr.email);
+           navigate('/login')
+
+        }
+        else{
+            setError(true);
+        }
+       }
+       const navigate = useNavigate();
+       const [username, setOne] = useState('');
+       const [email, setTwo] = useState('');
+       const [password, setThree] = useState('');
+       const [repassword, setFour] = useState('');
+       const [error, setError] = useState(null);
+      function setUsername(e){
+         setOne(e.target.value);
+     }
+     function setEmail(e){
+         setTwo(e.target.value);
+     }
+     function setPassword(e){
+         setThree(e.target.value);
+     }
+     function setRepassword(e){
+          setFour(e.target.value);
+     }
+   
+       const handleRegister = async () => {
+           if (password == repassword) {
+               setError('Passwords do not match');
+               return;
+           }
+           const response = await axios.post('http://localhost:5000/register', {
+            username,
+            password,
+            email,
+        });
+           try{
+               const response = await axios.post('http://localhost:5000/register', {
+                   username,
+                   password,
+                   email,
+               });
+               
+               if (response.data) {
+                   navigate('/login'); // Redirect to login page on successful registration
+               }
+           } catch (err) {
+               console.error('Registration failed:', err);
+               setError('Registration failed. Please try again.');
+           }
+               */}
+               const[username,setUsername] = useState('');
+               const[email,setEmail] = useState('');
+               const[password,setPassword] = useState('');
+               const[rePass,setRepass] = useState('');
+               const navigate = useNavigate();
+
+               function handleLogin()
+               {
+                if(password===rePass){
+                
+                  console.log('Username:', username);
+            console.log('Email:', email);
+            console.log('Password:', password);
+                
+                 axios.post('http://localhost:5000/users',{
+                   email,
+                   username,
+                   password
+                 });
+                 navigate('/login');
+                }
+               }
+             
+               function eml(e)
+               {
+                 setEmail(e.target.value);
+               }
+               function usrNme(e)
+               {
+                 setUsername(e.target.value);
+               }
+               function psWr(e)
+               {
+                 setPassword(e.target.value);
+               }
+               function rPs(e)
+  {
+    setRepass(e.target.value);
+  }
 
  return(
     <div style={BG}>
@@ -86,10 +210,10 @@ function Reg(){
       <div style={body2}>
         <h1 style={{color : 'white',padding :'10px'}}>Register</h1>
         <div className='inputBox' style={{marginBottom : '15px'}}>
-         <input type='text' placeholder='username' style={inputstyle}/><br />
-         <input type='email' placeholder='email' style={inputstyle}/><br />
-         <input type='password' placeholder='password' style={inputstyle}/><br/>
-         <input type='password' placeholder='re-enter password' style={inputstyle}/><br/> 
+         <input type='text' placeholder='username' style={inputstyle} onChange={usrNme}/><br />
+         <input type='email' placeholder='email' style={inputstyle} onChange={eml}/><br />
+         <input type='password' placeholder='password' style={inputstyle} onChange={psWr}/><br/>
+         <input type='password' placeholder='re-enter password' style={inputstyle} onChange={rPs}/><br/> 
          <a
               href='#'
               style={linkStyle2}
@@ -102,6 +226,7 @@ function Reg(){
               style={buttonStyle}
               onMouseEnter={() => setIsButtonHovered(true)}
               onMouseLeave={() => setIsButtonHovered(false)}
+              onClick={handleLogin}
             >
               Register
        </button>

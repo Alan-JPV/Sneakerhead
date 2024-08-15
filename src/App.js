@@ -14,9 +14,19 @@ import Cart from './components/cart';
 import Wish from './components/wishlist';
 import Adm1 from './components/adminPortal';
 import Check from './components/checkout';
+import ProductPage2 from './components/pl1';
+import { UserProvider } from './context/UserContext';
+import WishlistPage from './components/newWishlist';
+import WishlistPage3 from './components/wish';
+import ProductPage3 from './components/pl3';
+import ProductDescription from './components/descriptionPL';
+import SneakerDescription from './components/productdes';
+import CartPage from './components/newCart';
+import Profile from './components/profile';
 function App() {
   return (
     <>
+    <UserProvider>
     <div style={{background: 'linear-gradient(180deg, #FFF 2%, #75A9CF 100%)'}}>
     <BrowserRouter>
     <Nav />
@@ -25,15 +35,21 @@ function App() {
        <Route path="/login" element={<Log />}></Route>
        <Route path="/register" element={<Reg />}></Route> 
        <Route path="/*" element={<Err />}></Route> 
-       <Route path="/product" element={<ProductPage />}></Route>  
-       <Route path="/profile" element={<Profilesetting />}></Route>
-       <Route path="/cart" element={<Cart />}></Route>  
-       <Route path="/wishlist" element={<Wish />}></Route>  
+       {/*<Route path="/product" element={<ProductPage />}></Route>*/} 
+       <Route path="/product" element={<ProductPage3 />}></Route>           {/*product upgrade*/}
+       {/*<Route path="/products/:id" element={<ProductDescription />} />*/}
+       <Route path="/products/:id" element={<SneakerDescription />} />
+       <Route path="/profile" element={<Profile />}></Route>
+       <Route path="/cart" element={<CartPage />}></Route>  
+       {/*<Route path="/wishlist" element={<Wish />}></Route>  */}
+       <Route path="/wish" element={<WishlistPage />}></Route>  
+       <Route path="/wishlist" element={<WishlistPage3 />}></Route>
        <Route path="/admin" element={<Adm1 />}></Route>
        <Route path="/check" element={<Check />}></Route>
        </Routes>
     </BrowserRouter>
     </div>
+    </UserProvider>
     </>
   );
 }

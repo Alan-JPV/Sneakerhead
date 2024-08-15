@@ -27,7 +27,9 @@ function Nav(){
     return(
         <div style={d}>
             <Dropdown />
-            <hi>👟SneakerHead</hi>
+            
+            <hi><Link to ='/'>👟SneakerHead</Link></hi>
+            
             <Link to ='/cart'>
             <FontAwesomeIcon icon={faCartShopping} />
             </Link>

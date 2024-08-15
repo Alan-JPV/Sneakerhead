@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import img1 from '../components/sneakerhead.png';
+import { Link,useNavigate } from 'react-router-dom';
+import { useUser } from '../context/UserContext';
 
 const Body = {
    display: 'flex',
@@ -80,15 +82,47 @@ function Log(){
       textDecoration: 'none',
       cursor: 'pointer',
     };
-
+    
+    const[username,setUsername] = useState('');
+    const[password,setPassword] = useState('');
+    const navigate = useNavigate();
+    const {login} = useUser();
+  
+    function usrNme(e)
+      {
+        setUsername(e.target.value);
+      }
+      function psWr(e){
+        setPassword(e.target.value);
+      }
+  
+      async function handleLogins() {
+        try {
+          const response = await axios.post('http://localhost:5000/login', {
+            username,
+            password
+          });
+      
+          if (response.data.success) {
+            login(response.data.usr.username, response.data.usr.email);
+            navigate('/');
+          } else {
+            alert(response.data.message); // Display the error message
+          }
+        } catch (error) {
+          console.error('Error during login:', error);
+          alert('An error occurred during login. Please try again.');
+        }
+      }
+      
  return(
     <div style={BG}>
      <div className='wrapper' style={Body}>
       <div style={body2}>
         <h1 style={{color : 'white',padding :'10px'}}>Login</h1>
         <div className='inputBox' style={{marginBottom : '15px'}}>
-         <input type='email' placeholder='username' style={inputstyle}/><br />
-         <input type='password' placeholder='password' style={inputstyle}/><br/>
+         <input type='text' placeholder='username' onChange={usrNme} style={inputstyle}/><br />
+         <input type='password' placeholder='password' onChange={psWr} style={inputstyle}/><br/>
          <a
               href='#'
               style={linkStyle2}
@@ -101,6 +135,7 @@ function Log(){
               style={buttonStyle}
               onMouseEnter={() => setIsButtonHovered(true)}
               onMouseLeave={() => setIsButtonHovered(false)}
+              onClick={handleLogins}
             >
               Login
        </button>
