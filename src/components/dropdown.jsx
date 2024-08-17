@@ -36,9 +36,6 @@ const Dropdown = () => {
                     <li>
                         <Link to='/wishlist'>WishList</Link>
                     </li>
-                    <li>
-                        <Link to='/admin'>Admin portal</Link>
-                    </li>
                 </ul>
             )}
         </div>
