@@ -107,7 +107,7 @@ function Reg(){
         if(password==repassword){
             setPrint({username,email,password,repassword});
             setError(false);
-            const response=axios.post('http://localhost:5000/register',{
+            const response=axios.post('https://sn-backend-gq6u.onrender.com/register',{
                username,
                password,
                email,
@@ -144,13 +144,13 @@ function Reg(){
                setError('Passwords do not match');
                return;
            }
-           const response = await axios.post('http://localhost:5000/register', {
+           const response = await axios.post('https://sn-backend-gq6u.onrender.com/register', {
             username,
             password,
             email,
         });
            try{
-               const response = await axios.post('http://localhost:5000/register', {
+               const response = await axios.post('https://sn-backend-gq6u.onrender.com/register', {
                    username,
                    password,
                    email,
@@ -178,7 +178,7 @@ function Reg(){
             console.log('Email:', email);
             console.log('Password:', password);
                 
-                 axios.post('http://localhost:5000/users',{
+                 axios.post('https://sn-backend-gq6u.onrender.com/users',{
                    email,
                    username,
                    password

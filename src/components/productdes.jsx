@@ -16,7 +16,7 @@ function SneakerDescription() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/products/${id}`);
+                const response = await axios.get(`https://sn-backend-gq6u.onrender.com/products/${id}`);
                 setProduct(response.data);
                 setLoading(false); // Set loading to false after data is fetched
             } catch (error) {

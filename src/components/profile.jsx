@@ -11,7 +11,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/profile', {
+                const response = await axios.get('https://sn-backend-gq6u.onrender.com/profile', {
                     params: { username }
                 });
                 if (response.data.success) {

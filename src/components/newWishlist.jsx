@@ -9,7 +9,7 @@ const WishlistPage = () => {
         // Fetch wishlist from backend (assuming you have an API endpoint for it)
         const fetchWishlist = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/wishlist');
+                const response = await axios.get('https://sn-backend-gq6u.onrender.com/wishlist');
                 setWishlist(response.data);
             } catch (error) {
                 console.error('Error fetching wishlist:', error);

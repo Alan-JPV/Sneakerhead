@@ -10,7 +10,7 @@ const ProductPage3 = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/products');
+                const response = await axios.get('https://sn-backend-gq6u.onrender.com/products');
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
@@ -22,7 +22,7 @@ const ProductPage3 = () => {
 
     const addToWishlist = async (product) => {
         try {
-            await axios.post('http://localhost:5000/wishlist', product);
+            await axios.post('https://sn-backend-gq6u.onrender.com/wishlist', product);
             alert('Product added to wishlist!');
         } catch (error) {
             console.error('Error adding to wishlist:', error);
@@ -30,7 +30,7 @@ const ProductPage3 = () => {
     };
     const addToCart = async (product) => {
         try {
-            await axios.post('http://localhost:5000/cart', product);
+            await axios.post('https://sn-backend-gq6u.onrender.com/cart', product);
             alert('Product added to cart!');
         } catch (error) {
             console.error('Error adding to cart:', error);

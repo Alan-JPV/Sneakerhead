@@ -47,11 +47,7 @@ const Desktop2 = (props) => {
           className="desktop2-image1"
         />
         <div className="desktop2-header">
-          <img
-            src="/external/rectangle2i428-r2m-200h.png"
-            alt="Rectangle2I428"
-            className="desktop2-rectangle2"
-          />
+
         </div>
       </div>
    { /*product lis*/}

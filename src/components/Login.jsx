@@ -98,7 +98,7 @@ function Log(){
   
       async function handleLogins() {
         try {
-          const response = await axios.post('http://localhost:5000/login', {
+          const response = await axios.post('https://sn-backend-gq6u.onrender.com/login', {
             username,
             password
           });

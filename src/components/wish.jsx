@@ -9,7 +9,7 @@ const WishlistPage3 = () => {
     useEffect(() => {
         const fetchWishlist = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/wishlist');
+                const response = await axios.get('https://sn-backend-gq6u.onrender.com/wishlist');
                 setWishlist(response.data);
             } catch (error) {
                 console.error('Error fetching wishlist:', error);
@@ -21,7 +21,7 @@ const WishlistPage3 = () => {
 
     const removeFromWishlist = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/wishlist/${id}`);
+            await axios.delete(`https://sn-backend-gq6u.onrender.com/wishlist/${id}`);
             setWishlist(wishlist.filter(product => product._id !== id));
             alert('Product removed from wishlist!');
         } catch (error) {

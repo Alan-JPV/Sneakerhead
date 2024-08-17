@@ -10,7 +10,7 @@ const CartPage = () => {
     useEffect(() => {
         const fetchCartItems = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/cart');
+                const response = await axios.get('https://sn-backend-gq6u.onrender.com/cart');
                 setCartItems(response.data);
             } catch (error) {
                 console.error('Error fetching cart items:', error);
@@ -22,7 +22,7 @@ const CartPage = () => {
 
     const removeFromCart = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/cart/${id}`);
+            await axios.delete(`https://sn-backend-gq6u.onrender.com/cart/${id}`);
             setCartItems(cartItems.filter(item => item._id !== id));
             alert('Product removed from cart!');
         } catch (error) {
